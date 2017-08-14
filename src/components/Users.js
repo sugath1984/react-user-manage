@@ -48,67 +48,68 @@ let Users = React.createClass({
         return last;
     },
     render: function () {
-    return (
-        <div>
-            <h2 className="center-block">Users</h2>
-            {
-                <table>
-                    <tbody>
-                    {
-                        this.state.users.slice().map(p => (
-                            <tr key={ p.number }>
-                                <td><Link  to={ `/profile/${ p.number }` }>{ p.name }</Link></td>
-                                <td><button className="btn-danger" onClick={ this.deleteUser.bind(this, p.number) }> Delete </button></td>
-                            </tr>
-                        ))
-                    }
-                    </tbody>
-                </table>
-            }
-            <hr/>
-            <h2 className="center-block">Create User</h2>
-            <form className="form-inline" name="userCreateForm" ref="userCreateForm" onSubmit={ this.createUser }>
-                <div className="form-group">
-                    <label htmlFor="firstName">First Name</label>
-                    <input type="text" id="firstName" placeholder="e.x.sugath" ref="firstName" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="lastName">Last Name</label>
-                    <input type="text" id="lastName" placeholder="e.x.fernando" ref="lastName" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="address">Address</label>
-                    <input type="text" id="address" placeholder="e.x.23 panadura" ref="address" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="countryCode"> Contact with Country Code </label>
-                    <input type="text" id="countryCode" placeholder="e.x.lk" ref="countryCode" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="dob">Date of Birth</label>
-                    <input type="text" id="dob" placeholder="e.x.1984-12-09" ref="dob" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="email">Email</label>
-                    <input type="email" id="email" placeholder="e.x.s@y.com" ref="email" className="form-control" required/>
-                </div>
-                <br/>
-                <div className="form-group">
-                    <label htmlFor="image">Image</label>
-                    <input type="file" ref="image" name="file" />
-                </div>
-                <br/>
-                <div className="form-group">
-                    <button type="submit" className="btn btn-primary">Add User</button>
-                </div>
-            </form>
-        </div>
-    )}
+        return (
+            <div>
+                <h2 className="center-block">Users</h2>
+                {
+                    <table>
+                        <tbody>
+                        {
+                            this.state.users.slice().map(p => (
+                                <tr key={ p.number }>
+                                    <td><Link  to={ `/profile/${ p.number }` }>{ p.name }</Link></td>
+                                    <td><button className="btn-danger" onClick={ this.deleteUser.bind(this, p.number) }> Delete </button></td>
+                                </tr>
+                            ))
+                        }
+                        </tbody>
+                    </table>
+                }
+                <hr/>
+                <h2 className="center-block">Create User</h2>
+                <form className="form-inline" name="userCreateForm" ref="userCreateForm" onSubmit={ this.createUser }>
+                    <div className="form-group">
+                        <label htmlFor="firstName">First Name</label>
+                        <input type="text" id="firstName" placeholder="e.x.sugath" ref="firstName" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="lastName">Last Name</label>
+                        <input type="text" id="lastName" placeholder="e.x.fernando" ref="lastName" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="address">Address</label>
+                        <input type="text" id="address" placeholder="e.x.23 panadura" ref="address" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="countryCode"> Contact with Country Code </label>
+                        <input type="text" id="countryCode" placeholder="e.x.lk" ref="countryCode" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="dob">Date of Birth</label>
+                        <input type="text" id="dob" placeholder="e.x.1984-12-09" ref="dob" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" id="email" placeholder="e.x.s@y.com" ref="email" className="form-control" required/>
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <label htmlFor="image">Image</label>
+                        <input type="file" ref="image" name="file" />
+                    </div>
+                    <br/>
+                    <div className="form-group">
+                        <button type="submit" className="btn btn-primary">Add User</button>
+                    </div>
+                </form>
+            </div>
+        )
+    }
 })
 
 export default Users
