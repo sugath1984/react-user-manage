@@ -6,7 +6,7 @@ const UserProfileDetails = (props) => {
     const user = UserAPI.get(
         parseInt(props.match.params.number, 10)
     )
-    if (!user) {
+    if (! user) {
         return <div>Sorry, user was not found</div>
     }
     return (

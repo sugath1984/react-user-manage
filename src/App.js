@@ -12,10 +12,10 @@ class App extends Component {
         <AppLayout/>,
             <HashRouter>
                 <div>
-                    <Route path="/" component={AppLayout}/>
-                    <Route path="/users" component={Users}/>
-                    <Route path="/profile/:number" component={UserProfileDetails}/>
-                    <Route path="/create" component={UserCreate}/>
+                    <Route path="/" component={ AppLayout }/>
+                    <Route path="/users" component={ Users }/>
+                    <Route path="/profile/:number" component={ UserProfileDetails }/>
+                    <Route path="/create" component={ UserCreate }/>
                 </div>
             </HashRouter>
     );

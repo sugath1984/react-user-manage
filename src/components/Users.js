@@ -30,12 +30,12 @@ let Users = React.createClass({
             address : address,
             countryCode : countryCode,
             dateOfBirth : dob,
-            email: email,
+            email : email,
             image : image,
         }
         e.preventDefault();
         this.getInitialState().users.push(newUser);
-        this.setState({data: this.getInitialState().users});
+        this.setState({ data: this.getInitialState().users });
         this.refs.userCreateForm.reset();
 
     },
@@ -57,7 +57,7 @@ let Users = React.createClass({
                     {
                         this.state.users.slice().map(p => (
                             <tr key={ p.number }>
-                                <td><Link  to={ `/profile/${ p.number }` }>{p.name}</Link></td>
+                                <td><Link  to={ `/profile/${ p.number }` }>{ p.name }</Link></td>
                                 <td><button className="btn-danger" onClick={ this.deleteUser.bind(this, p.number) }> Delete </button></td>
                             </tr>
                         ))
